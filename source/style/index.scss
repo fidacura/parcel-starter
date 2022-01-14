@@ -1,0 +1,54 @@
+$small: "only screen and (min-width: 480px)";
+$medium: "only screen and (min-width: 768px)";
+$large: "only screen and (min-width: 1140px)";
+
+@mixin tablet {
+  @media #{$small} {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media #{$medium} {
+    @content;
+  }
+}
+
+@mixin xldesktop {
+  @media #{$large} {
+    @content;
+  }
+}
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@mixin goodtype {
+  -webkit-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -ms-font-smoothing: antialiased;
+  -o-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-font-smoothing: grayscale;
+  -webkit-font-feature-settings: "kern"1, "dlig"1, "ss01"1;
+  font-feature-settings: "kern"1, "dlig"1, "ss01"1;
+  text-size-adjust: 100%;
+  text-decoration: none;
+}
+
+html, body {
+  @include goodtype;
+  font-family: sans-serif;
+  font-size: 13px;
+  line-height: 1.3;
+}

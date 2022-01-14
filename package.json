@@ -1,0 +1,17 @@
+{
+  "name": "parcel9000",
+  "description": "",
+  "version": "1.0.0",
+  "author": "fidacura",
+  "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "rm -rf .cache dist & parcel build index.html"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.2.0",
+    "parcel": "latest"
+  }
+}
